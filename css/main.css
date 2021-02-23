@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+body {
+  color: #000;
+  background-image: url(../img/AdobeStock_340906301.jpeg);
+  background-attachment: fixed;
+  font-family: "Droid Serif", YuGothic, "游ゴシック", sans-serif;
+}
+
+.animated {
+  /* アニメーションで表示させるため最初は非表示 */
+  opacity: 0;
+}
+
+
+/*-- メニュー --*/
+.gnav {
+  width: 100%;
+  background-color: #fafaff;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+}
+
+.gnav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 0;
+  list-style: none;
+}
+
+.gnav ul li {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.gnav ul li a {
+  display: block;
+  padding-top:15px;
+  padding-bottom: 13px;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid #fafaf3;
+  transition: border-bottom .25s linear;
+}
+
+.gnav ul li a:hover {
+  border-bottom: 2px solid #000;
+}
+/*-- /メニュー --*/
+
+
+
+/*-- トップ --*/
+.top {
+  /*子要素でposition:absolutを使う為必要*/
+  position: relative;
+}
+
+.top {
+  /*画面いっぱいに広げる*/
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.top__title {
+  margin-bottom: 10px;
+  font-size: 3.5rem;
+  line-height: 77px;
+  letter-spacing: 4px;
+}
+
+.top__catchphrase {
+  font-size: 2rem;
+}
+
+.top__text-box {
+  /* 上下中央に置く */
+  position: relative;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+
+  font-weight: 100;
+}
+/*-- /トップ --*/
+
+
+.me,
+.skils,
+.works,
+.contacts {
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+.contacts {
+  /*画面いっぱいに広げる*/
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.me__phrase,
+.skils__phrase,
+.works__phrase,
+.contacts__phrase {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1.79px;
+}
+
+.me__title,
+.skils__title,
+.works__title,
+.contacts__title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+}
+
+
+/*-- 私は --*/
+.me {
+  background: #fafaf3;
+}
+
+.my_introduce-item {
+  text-align: center;
+}
+
+.my_pic {
+  margin-bottom: 30px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50% 50% 50% 50%; 
+}
+/*-- /私は --*/
+
+/*-- スキル --*/
+.skils {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.skils_item-description {
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.skils_item-icon {
+  font-size: 2rem;
+}
+
+.skils_item-icon p {
+  font-size: 1.5rem;
+}
+
+.skils_item-description {
+  /* 左右中央に置く */
+  margin: 0 auto;
+  width: 80%;
+}
+/*-- /スキル --*/
+
+/*-- ワークス --*/
+.works {
+  background-color: #fafaf3;
+}
+
+.works__item {
+  text-align: center;
+  padding: 15px;
+}
+
+.box {
+  background-color: #fff;
+  border: 1.5px solid #999;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.box:hover {
+  box-shadow: 6px 6px 10px 1px #bbb;
+  transition: 0.3s;
+}
+
+.works__item-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px auto;
+}
+
+.works__item-image {
+  width: 200px;
+  height: 150px;
+}
+
+.works__item-description {
+  /* 左右中央に置く */
+  margin: 10px auto;
+  font-size: 1.2rem;
+  width: 80%;
+}
+/*-- /ワークス --*/
+
+/*-- 問い合わせ --*/
+.sns_item {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.sns_item-icon {
+  padding: 0 10px;
+}
+
+.sns_item-icon:hover {
+  text-decoration: none;
+}
+/*-- /問い合わせ --*/
+
+
+/*-- フッター --*/
+footer {
+  padding: 25px 0;
+  background-color: #fafaf3;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+/* Bootstrapのmd以上の表示幅で適用されるスタイル */
+@media (min-width: 768px) {
+  .top__title {
+    font-size: 4rem;
+  }
+  
+  .top__catchphrase {
+    font-size: 2.125rem;
+  }
+  
+  .container {
+    width: 70%;
+  }
+  
+  .me__title,
+  .skils__title,
+  .products__title,
+  .contacts__title {
+    font-size: 3rem;
+  }
+  
+  /*-- メニュー --*/
+  .gnav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    height: 60px;
+  }
+  
+  .gnav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+  }
+  
+  .gnav ul li {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  
+  .gnav ul li a {
+    display: block;
+    padding-top:15px;
+    padding-bottom: 13px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px solid #fafaf3;
+    transition: border-bottom .25s linear;
+  }
+  
+  .gnav ul li a:hover {
+    border-bottom: 2px solid #000;
+  }
+  /*-- メニュー --*/
+  
+  .my_pic {
+    width: 450px;
+    height: 450px;
+    margin-bottom: 0;
+  }
+  
+  .my_introduce-item {
+    text-align: left;
+  }
+  
+  .skils_title,
+  .skils_icon{
+    font-size: 1.5rem;
+  }
+  
+  .works__item-image {
+    width: 400px;
+    height: 300px;
+  }
+  
+  footer {
+    margin-bottom: 0;
+  }
+}
+
+/* 印刷用のスタイル */
+@media print {
+  .animated {
+    /*すべて表示*/
+    opacity: 1;
+  }
+}
+
